@@ -2,50 +2,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For The Beaches | Women's Swimwear</title>
-    <meta name="description" content="Find your perfect swimsuit for that perfect summer getaway.">
+    <title>For The Beaches | Women's Swimwear Shop</title>
+    <meta name="description" content="Shop the latest in women's sustainable swimwear at For The Beaches. High-quality bikinis and one-pieces.">
 
     <style>
         :root {
             --brand-pink: #FFC0CB;
             --brand-border: #D02090;
             --brand-dark: #800040;
-            --text-main: #333333;
-            /* Font styles - consistent sizes */
-            --font-size-body: 18px;
-            --font-size-h2: 28px;
-        }
-
-        <title> {
-            <h1> FOR THE BEACHES <h1/>
+            --footer-height: 60px;
         }
 
         body {
-            line-height: 1.6;
-            font-size: var(--font-size-body);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
-            background-color: #f9f9f9;
-            color: var(--text-main);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+            padding-bottom: var(--footer-height);
         }
 
-       .fixed-logo-container {
-            position: fixed; /* Keeps it in one place while scrolling */
+        /* Fixed Background Logo (Entire Page) */
+        .fixed-logo-container {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100vh; /* Covers the full height of the viewport */
-            z-index: -1;   /* Places it behind the text content */
-            
-            /* Visuals */
-            background-image: url('https://via.placeholder.com/1920x1080/FFC0CB/800040?text=FOR+THE+BEACHES');
-            background-size: cover;      /* Ensures it spans the entire width */
+            height: 100vh;
+            z-index: -1;
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.6; /* Lightened so text remains legible over it */
+            opacity: 0.3;
         }
 
-        /* Navigation remains at the top */
+        /* Navigation - Accessible 48px targets */
         nav {
             background-color: var(--brand-dark);
             position: sticky;
@@ -59,6 +49,7 @@
             justify-content: center;
             margin: 0;
             padding: 0;
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -71,80 +62,91 @@
             padding: 0 20px;
         }
 
-        /* Content needs a background so it covers the logo as you scroll */
+        /* Shopping Layout */
         .content-wrapper {
-            margin-top: 100vh; /* Pushes content down so logo is seen first */
+            margin-top: 60vh; /* Show top logo banner first */
             background-color: white;
             position: relative;
             z-index: 1;
-            padding: 50px 20px;
-            border-top: 10px solid var(--brand-border);
+            padding: 40px 20px;
+            border-top: 8px solid var(--brand-border);
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+        .shop-header {
+            text-align: center;
+            margin-bottom: 40px;
         }
 
-        h1, h2 {
+        h1 {
+            font-size: 3rem;
             color: var(--brand-dark);
+            margin: 0;
             text-transform: uppercase;
         }
 
-        .spacer {
-            height: 1000px; /* Temporary height to demonstrate the scroll effect */
+        /* Product Grid - Fluid for Mobile/Desktop */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-    </style>
-</head>
-<body>
 
-    <div class="fixed-logo-container" aria-hidden="true"></div>
+        .product-card {
+            border: 2px solid #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+            transition: transform 0.3s;
+        }
 
-    <nav>
-        <ul>
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#swimwear">SWIMWEAR</a></li>
-            <li><a href="#gallery">GALLERY</a></li>
-        </ul>
-    </nav>
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--brand-pink);
+        }
 
-    <div class="content-wrapper">
-        <main class="container" id="home">
+        .product-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
 
-    <header class="header-banner">
-        <a href="#home">
-            <img src="https://via.placeholder.com/60/D02090/FFFFFF?text=FTB" alt="For The Beaches Logo" style="border-radius: 50%;">
-        </a>
-        <h1>For The Beaches</h1>
-    </header>
+        .product-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px 0 5px;
+            color: var(--brand-dark);
+        }
 
-    <main class="container">
-        <section id="home">
-            <h2>WELCOME TO THE BEACHLINE!</h2>
-            <p>Our mission is to provide <span class="emphasis-text">stylish, high-quality, and fitted</span> swimsuits to our customers. Whether you are a size 3XL <strong>BOLD</strong>, <em>SMALL</em>, or MEDIUM, we have swimsuits that are tailored to fit all sizes.</p>
-        </section>
+        .product-price {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 15px;
+        }
 
-        <section id="swimsuits">
-            <h2>SWIMWEAR</h2>
-            <p>To learn more about beach conservation, please visit these official organizations:</p>
-            <ul class="resource-list">
-                <li>
-                    <a href="https://www.surfrider.org" class="external-link" target="_blank" rel="noopener">Surfrider Foundation</a> - Dedicated to the protection and enjoyment of the world’s ocean and beaches.
-                </li>
-                <li>
-                    <a href="https://oceana.org" class="external-link" target="_blank" rel="noopener">Oceana</a> - The largest international advocacy organization focused solely on ocean conservation.
-                </li>
-                <li>
-                    <a href="https://www.oceanconservancy.org" class="external-link" target="_blank" rel="noopener">Ocean Conservancy</a> - Working to protect the ocean from today’s greatest global challenges.
-                </li>
-            </ul>
-        </section>
-    </main>
+        /* CTA - Shop Button */
+        .add-to-cart {
+            background-color: var(--brand-border);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
 
-    footer {
+        .add-to-cart:hover {
+            background-color: var(--brand-dark);
+        }
+
+        /* Fixed Footer */
+        footer {
             position: fixed;
             bottom: 0;
-            left: 0;
             width: 100%;
             height: var(--footer-height);
             background-color: var(--brand-dark);
@@ -152,12 +154,55 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 2000; /* Higher than content and logo */
-            border-top: 3px solid var(--brand-border);
-            font-size: 14px;
+            z-index: 2000;
         }
+    </style>
+</head>
+<body>
+
+    <div class="fixed-logo-container"></div>
+
+    <nav>
+        <ul>
+            <li><a href="#new">NEW ARRIVALS</a></li>
+            <li><a href="#bikinis">BIKINIS</a></li>
+            <li><a href="#one-pieces">ONE-PIECES</a></li>
+            <li><a href="#sale">SALE</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <header class="shop-header">
+            <h1>FOR THE BEACHES</h1>
+            <p>Sustainable. Stylish. Women's Swimwear.</p>
+        </header>
+
+        <main class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1596435707700-62645849f05a?auto=format&fit=crop&w=500&q=80" alt="Sustainable turquoise bikini set">
+                <div class="product-title">Azure Two-Piece</div>
+                <div class="product-price">$45.00</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1590650213165-c1fef80648c4?auto=format&fit=crop&w=500&q=80" alt="Floral print one-piece swimsuit">
+                <div class="product-title">Tropical One-Piece</div>
+                <div class="product-price">$65.00</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?auto=format&fit=crop&w=500&q=80" alt="Sporty high-waisted black bikini">
+                <div class="product-title">Midnight Sport Bikini</div>
+                <div class="product-price">$50.00</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </main>
+    </div>
+
     <footer>
-        <p>&copy; 2026 For The Beaches.</p>
+        <p>&copy; 2026 For The Beaches | Secure Checkout Available</p>
     </footer>
 
 </body>
