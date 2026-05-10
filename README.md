@@ -16,6 +16,10 @@
             --font-size-h2: 28px;
         }
 
+        <title> {
+            <h1> FOR THE BEACHES <h1/>
+        }
+
         body {
             line-height: 1.6;
             font-size: var(--font-size-body);
@@ -99,21 +103,13 @@
     <nav>
         <ul>
             <li><a href="#home">HOME</a></li>
+            <li><a href="#swimwear">SWIMWEAR</a></li>
             <li><a href="#gallery">GALLERY</a></li>
-            <li><a href="#resources">RESOURCES</a></li>
         </ul>
     </nav>
 
     <div class="content-wrapper">
         <main class="container" id="home">
-
-    <nav>
-        <ul>
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#swimsuits">SWIMSUITS</a></li>
-            <li><a href="#gallery">GALLERY</a></li>
-        </ul>
-    </nav>
 
     <header class="header-banner">
         <a href="#home">
@@ -124,12 +120,12 @@
 
     <main class="container">
         <section id="home">
-            <h2>Welcome to the Beachline!</h2>
+            <h2>WELCOME TO THE BEACHLINE!</h2>
             <p>Our mission is to provide <span class="emphasis-text">stylish, high-quality, and fitted</span> swimsuits to our customers. Whether you are a size 3XL <strong>BOLD</strong>, <em>SMALL</em>, or MEDIUM, we have swimsuits that are tailored to fit all sizes.</p>
         </section>
 
         <section id="swimsuits">
-            <h2>Swimewear</h2>
+            <h2>SWIMWEAR</h2>
             <p>To learn more about beach conservation, please visit these official organizations:</p>
             <ul class="resource-list">
                 <li>
