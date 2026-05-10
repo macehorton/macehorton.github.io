@@ -1,24 +1,4 @@
 theme: jekyll-theme-minimal
 title: For The Beaches
-description: Bookmark this to keep an eye on my project updates!
-public class SwimwearStore {
-    public static void main(String[] args) {
-        // 1. Initialize some inventory
-        Swimwear bikini = new Swimwear("S001", "Tropical Floral Bikini", "M", 45.99, "Ocean Blue");
-        Swimwear onePiece = new Swimwear("S002", "Classic High-Neck One-Piece", "S", 59.50, "Midnight Black");
-        Swimwear sarong = new Swimwear("S003", "Sheer Beach Wrap", "One Size", 25.00, "Sunset Orange");
+description: An online shopping website that is tailored to meet your summer swimwear needs! We have everything in ALL sizes! Find your fit today!
 
-        // 2. User starts shopping
-        ShoppingCart myCart = new ShoppingCart();
-        
-        System.out.println("Welcome to the Azure Tide Swimwear Store!\n");
-        
-        myCart.addItem(bikini);
-        myCart.addItem(sarong);
-
-        // 3. Review and Checkout
-        myCart.displayCart();
-        
-        System.out.println("\nProceeding to secure payment...");
-    }
-}
