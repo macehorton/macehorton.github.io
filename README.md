@@ -139,6 +139,46 @@
             border-color: var(--brand-border);
         }
 
+        /* Home Content Grid */
+        .home-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .hero-gallery img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 5px solid var(--brand-pink);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .welcome-box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid var(--brand-border);
+            margin-top: 20px;
+        }
+
+        .welcome-text {
+            font-size: 1.5rem;
+            color: var(--brand-dark);
+            font-weight: bold;
+        }
+
         /* Fixed Bottom Footer */
         footer {
             position: fixed;
@@ -168,7 +208,35 @@
             </ul>
         </nav>
     </header>
+    <main class="shop-container" id="bikinis">
+        <h2 class="section-title">Shop Our Bikinis</h2>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1596435707700-62645849f05a?auto=format&fit=crop&w=600&q=80" alt="Turquoise high-waisted bikini">
+                <div class="product-name">Azure Coast Two-Piece</div>
+                <div class="product-price">$48.00</div>
+                <div class="product-sizes">SIZES: S, M, L, XL, XXL, 3XL</div>
+                <button class="btn-add">Add to Cart</button>
+            </div>
 
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?auto=format&fit=crop&w=600&q=80" alt="Sleek black sporty bikini">
+                <div class="product-name">Midnight Wave Bikini</div>
+                <div class="product-price">$52.00</div>
+                <div class="product-sizes">SIZES: S, M, L, XL, XXL, 3XL</div>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1590650213165-c1fef80648c4?auto=format&fit=crop&w=600&q=80" alt="Floral patterned ruffled bikini">
+                <div class="product-name">Paradise Bloom Bikini</div>
+                <div class="product-price">$55.00</div>
+                <div class="product-sizes">SIZES: S, M, L, XL, XXL, 3XL</div>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+        </div>
+    </main>
     <main class="sale-container" id="sale">
         <section class="promo-box">
             <h2 class="promo-title">TODAY ONLY!!!</h2>
