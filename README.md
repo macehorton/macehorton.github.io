@@ -145,6 +145,21 @@
         </section>
     </main>
 
+    footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: var(--footer-height);
+            background-color: var(--brand-dark);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000; /* Higher than content and logo */
+            border-top: 3px solid var(--brand-border);
+            font-size: 14px;
+        }
     <footer>
         <p>&copy; 2026 For The Beaches.</p>
     </footer>
