@@ -1,10 +1,9 @@
-# macehorton.github.io
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For The Beaches | Coastal Conservation Resources</title>
-    <meta name="description" content="Discover beautiful beaches and learn about coastal preservation with our expert resources.">
+    <title>For The Beaches | Women's Swimwear</title>
+    <meta name="description" content="Find your perfect swimsuit for that perfect summer getaway.">
 
     <style>
         :root {
@@ -114,7 +113,7 @@
     <nav>
         <ul>
             <li><a href="#home">HOME</a></li>
-            <li><a href="#resources">RESOURCES</a></li>
+            <li><a href="#swimsuits">SWIMSUITS</a></li>
             <li><a href="#gallery">GALLERY</a></li>
         </ul>
     </nav>
@@ -128,12 +127,12 @@
 
     <main class="container">
         <section id="home">
-            <h2>Welcome to the Coast</h2>
-            <p>Our mission is to provide <span class="emphasis-text">accurate, quality, and up-to-date</span> information regarding our oceans. Whether you are browsing in <strong>BOLD</strong>, <em>ITALICS</em>, or ALL CAPS, we ensure our content remains easy to read.</p>
+            <h2>Welcome to the Beachline!</h2>
+            <p>Our mission is to provide <span class="emphasis-text">stylish, high-quality, and fitted</span> swimsuits to our customers. Whether you are a size 3XL <strong>BOLD</strong>, <em>SMALL</em>, or MEDIUM, we have swimsuits that are tailored to fit all sizes.</p>
         </section>
 
-        <section id="resources">
-            <h2>External Resources</h2>
+        <section id="swimsuits">
+            <h2>Swimewear</h2>
             <p>To learn more about beach conservation, please visit these official organizations:</p>
             <ul class="resource-list">
                 <li>
@@ -150,7 +149,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 For The Beaches. All styles are consistent and legible.</p>
+        <p>&copy; 2026 For The Beaches.</p>
     </footer>
 
 </body>
