@@ -185,24 +185,44 @@
         const totalDisplay = document.getElementById('cart-total');
         
         container.innerHTML = '';
-        let total = 0;
+        let subtotal = 0;
 
         if (cart.length === 0) {
             container.innerHTML = '<tr><td colspan="3">Your cart is empty!</td></tr>';
+            totalDisplay.innerHTML = `<strong>$0.00</strong>`;
         } else {
+            // Calculate the raw subtotal
             cart.forEach((item, index) => {
-                total += item.price;
+                subtotal += item.price;
                 container.innerHTML += `
                     <tr>
                         <td>${item.name}</td>
                         <td>$${item.price.toFixed(2)}</td>
-                        <td><button onclick="removeItem(${index})" style="color:red; cursor:pointer;">Remove</button></td>
+                        <td><button onclick="removeItem(${index})" style="color:red; cursor:pointer; background:none; border:none;">Remove</button></td>
                     </tr>
                 `;
             });
+
+            // Apply Discount Logic
+            let finalTotal = subtotal;
+            let discountMessage = "";
+
+            if (subtotal >= 100) {
+                const discount = subtotal * 0.30; // 30% off
+                finalTotal = subtotal - discount;
+                discountMessage = `
+                    <tr style="color: #D02090; font-size: 0.9rem;">
+                        <td><em>30% Sale Discount Applied!</em></td>
+                        <td><em>-$${discount.toFixed(2)}</em></td>
+                        <td></td>
+                    </tr>
+                `;
+            }
+
+            // Update the table with discount info and final total
+            container.innerHTML += discountMessage;
+            totalDisplay.innerHTML = `<strong>$${finalTotal.toFixed(2)}</strong>`;
         }
-        
-        totalDisplay.innerHTML = `<strong>$${total.toFixed(2)}</strong>`;
     }
 
     function removeItem(index) {
@@ -217,7 +237,7 @@
         displayCart();
     }
 
-    // Run this when the page loads
+    // Initialize the cart on page load
     displayCart();
 </script>
 
