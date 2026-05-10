@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For The Beaches | Women's Bikinis</title>
+    <title>For The Beaches | Home - Sustainable Swimwear</title>
     <style>
         :root {
             --brand-pink: #FFC0CB;
@@ -16,32 +16,27 @@
             margin: 0;
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: #ffffff;
-            padding-bottom: calc(var(--footer-height) + 40px);
+            padding-bottom: calc(var(--footer-height) + 20px);
             padding-top: var(--header-height);
-            line-height: 1.5;
+            line-height: 1.6;
+            color: #333;
         }
 
-        /* Fixed Background Logo */
+        /* Fixed Background Logo Overlay */
         .fixed-logo-container {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
+            top: 0; left: 0; width: 100%; height: 100vh;
             z-index: -2;
             background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            opacity: 0.2;
+            opacity: 0.1;
         }
 
         /* Fixed Top Header & Title */
         header {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: var(--header-height);
+            top: 0; left: 0; width: 100%; height: var(--header-height);
             background-color: var(--brand-pink);
             border-bottom: 5px solid var(--brand-border);
             z-index: 3000;
@@ -56,13 +51,13 @@
             color: var(--brand-dark);
             margin: 5px 0;
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            padding: 0;
-            margin: 0;
+            padding: 0; margin: 0;
             background-color: var(--brand-dark);
             width: 100%;
             justify-content: center;
@@ -73,86 +68,70 @@
             text-decoration: none;
             font-weight: bold;
             padding: 12px 20px;
-            display: block;
-            min-height: 48px;
+            display: flex;
+            align-items: center;
+            min-height: 48px; /* Requirement: Mobile touch target */
         }
 
-        /* Size Selection Section */
-        .size-filter {
-            background: white;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 2px solid #eee;
-            margin-bottom: 20px;
-        }
-
-        .size-filter span {
-            font-weight: bold;
-            margin-right: 10px;
-            color: var(--brand-dark);
-        }
-
-        .size-btn {
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 3px;
-            border: 1px solid var(--brand-border);
-            border-radius: 4px;
-            text-decoration: none;
-            color: var(--brand-dark);
-            font-size: 14px;
-            background: #fff;
-        }
-
-        .size-btn:hover {
-            background-color: var(--brand-pink);
-        }
-
-        /* Bikini Product Grid */
-        .content-wrapper {
-            max-width: 1100px;
+        /* Home Content Section */
+        .home-container {
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
+            padding: 40px 20px;
             text-align: center;
-            padding-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
         }
 
-        .product-card img {
+        .hero-image-wrapper {
             width: 100%;
-            height: 400px;
+            border: 8px solid var(--brand-pink);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* Using a high-quality placeholder representing inclusive swimwear groups */
+            aspect-ratio: 16 / 9;
             object-fit: cover;
         }
 
-        .product-card h3 {
+        .welcome-statement {
+            font-size: 1.5rem;
             color: var(--brand-dark);
-            margin: 15px 0 5px;
+            font-weight: 500;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
         }
 
-        .price {
+        .cta-shop-now {
+            display: inline-block;
+            background-color: var(--brand-border);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
             font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 15px;
+            transition: background 0.3s;
+        }
+
+        .cta-shop-now:hover {
+            background-color: var(--brand-dark);
         }
 
         /* Fixed Bottom Footer */
         footer {
             position: fixed;
-            bottom: 0;
-            width: 100%;
+            bottom: 0; left: 0; width: 100%;
             height: var(--footer-height);
             background-color: var(--brand-dark);
             color: white;
@@ -160,6 +139,7 @@
             align-items: center;
             justify-content: center;
             z-index: 4000;
+            border-top: 3px solid var(--brand-border);
         }
     </style>
 </head>
@@ -171,58 +151,31 @@
         <h1>For The Beaches</h1>
         <nav>
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="#bikinis" style="background: var(--brand-border);">BIKINIS</a></li>
+                <li><a href="#home" style="background: var(--brand-border);">HOME</a></li>
+                <li><a href="#bikinis">BIKINIS</a></li>
                 <li><a href="#sale">SALE</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="size-filter">
-        <span>Filter by Size:</span>
-        <a href="#" class="size-btn">Small</a>
-        <a href="#" class="size-btn">Medium</a>
-        <a href="#" class="size-btn">Large</a>
-        <a href="#" class="size-btn">XL</a>
-        <a href="#" class="size-btn">XXL</a>
-        <a href="#" class="size-btn">3XL</a>
-    </div>
+    <main class="home-container" id="home">
+        
+        <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80" 
+                 alt="A diverse group of women with different body types smiling and wearing various colorful swimsuits on a sunny beach.">
+        </div>
 
-    <div class="content-wrapper">
-        <main class="product-grid" id="bikinis">
-            
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1596435707700-62645849f05a?auto=format&fit=crop&w=600&q=80" alt="Two-piece turquoise bikini set with adjustable straps">
-                <h3>Coral Reef Bikini</h3>
-                <p class="price">$48.00</p>
-                <p>Sizes: S - 3XL</p>
-                <button style="background: var(--brand-border); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Add to Cart</button>
-            </div>
+        <p class="welcome-statement">
+            Welcome to the Beachfront! Here, you will find all the swimsuits you need to look nice for your next summer getaway. Find your next fit today!
+        </p>
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?auto=format&fit=crop&w=600&q=80" alt="High-waisted black sporty bikini">
-                <h3>Midnight Wave Bikini</h3>
-                <p class="price">$52.00</p>
-                <p>Sizes: S - 3XL</p>
-                <button style="background: var(--brand-border); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Add to Cart</button>
-            </div>
+        <a href="#bikinis" class="cta-shop-now">Explore the Collection</a>
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1590650213165-c1fef80648c4?auto=format&fit=crop&w=600&q=80" alt="Floral print bikini with ruffled edges">
-                <h3>Paradise Floral Set</h3>
-                <p class="price">$55.00</p>
-                <p>Sizes: S - 3XL</p>
-                <button style="background: var(--brand-border); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Add to Cart</button>
-            </div>
-
-        </main>
-    </div>
+    </main>
 
     <footer>
-        <p>&copy; 2026 For The Beaches | Sizes S to 3XL Available</p>
+        <p>&copy; 2026 For The Beaches | All Bodies Are Beach Bodies</p>
     </footer>
 
-</body>
-</html>
 </body>
 </html>
