@@ -1,0 +1,201 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For The Beaches | Bikinis</title>
+    <style>
+        :root {
+            --brand-pink: #FFC0CB;
+            --brand-border: #D02090;
+            --brand-dark: #800040;
+            --footer-height: 60px;
+            --header-height: 180px; 
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial Black', sans-serif;
+            background-color: #ffffff;
+            padding-bottom: calc(var(--footer-height) + 40px);
+            padding-top: var(--header-height);
+            /* CENTER EVERYTHING IN BODY */
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+
+        .fixed-logo-container {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100vh;
+            z-index: -2;
+            background-image: url('https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+        }
+
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: var(--header-height);
+            background-color: var(--brand-pink);
+            border-bottom: 8px solid var(--brand-border);
+            z-index: 3000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 8vw, 4.5rem); 
+            color: var(--brand-dark);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 15px; 
+            font-weight: 900;
+            text-align: center;
+        }
+
+        nav {
+            width: 100%;
+            background-color: var(--brand-dark);
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0; padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+        }
+
+        /* CENTERED CONTAINER */
+        .shop-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers children horizontally */
+            text-align: center;   /* Centers text specifically */
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+            justify-items: center; /* Centers grid cards */
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 4px solid var(--brand-pink);
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers text/buttons inside card */
+        }
+
+        /* FIXED IMAGE LINKS */
+        .product-card img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .product-name { font-weight: bold; font-size: 1.3rem; color: var(--brand-dark); }
+        .product-price { color: var(--brand-border); font-size: 1.2rem; margin: 5px 0; }
+        .product-sizes { font-size: 0.9rem; color: #555; margin-bottom: 15px; }
+
+        .btn-add {
+            background-color: var(--brand-dark);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0; left: 0; width: 100%;
+            height: var(--footer-height);
+            background-color: var(--brand-dark);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 4000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fixed-logo-container"></div>
+
+    <header>
+        <h1>FOR THE BEACHES</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="bikinis.html" style="background: var(--brand-border);">BIKINIS</a></li>
+                <li><a href="sale.html">SALE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="shop-container">
+        <h2 style="color: var(--brand-dark); font-size: 2.5rem;">OUR BIKINIS</h2>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1596435707700-62645849f05a?auto=format&fit=crop&w=800&q=80" alt="Azure Bikini">
+                <div class="product-name">Azure Coast Two-Piece</div>
+                <div class="product-price">$48.00</div>
+                <div class="product-sizes">SIZES: S, M, L, XL, XXL, 3XL</div>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?auto=format&fit=crop&w=800&q=80" alt="Midnight Bikini">
+                <div class="product-name">Midnight Wave Bikini</div>
+                <div class="product-price">$52.00</div>
+                <div class="product-sizes">SIZES: S, M, L, XL, XXL, 3XL</div>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1590650213165-c1fef80648c4?auto=format&fit=crop&w=800&q=80" alt="Paradise Bikini">
+                <div class="product-name">Paradise Bloom Bikini</div>
+                <div class="product-price">$55.00</div>
+                <div class="product-sizes">SIZES: S, M, L, XL, XXL, 3XL</div>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>For the Beaches 2026.</p>
+    </footer>
+
+</body>
+</html>
