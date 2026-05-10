@@ -1,0 +1,166 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For The Beaches | Sale</title>
+    <style>
+        :root {
+            --brand-pink: #FFC0CB;
+            --brand-border: #D02090;
+            --brand-dark: #800040;
+            --sale-red: #E60000;
+            --footer-height: 60px;
+            --header-height: 180px; 
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial Black', sans-serif;
+            background-color: #ffffff;
+            padding-bottom: calc(var(--footer-height) + 40px);
+            padding-top: var(--header-height);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .fixed-logo-container {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100vh;
+            z-index: -2;
+            background-image: url('https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+        }
+
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: var(--header-height);
+            background-color: var(--brand-pink);
+            border-bottom: 8px solid var(--brand-border);
+            z-index: 3000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 8vw, 4.5rem); 
+            color: var(--brand-dark);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 15px; 
+            font-weight: 900;
+            text-align: center;
+        }
+
+        nav {
+            width: 100%;
+            background-color: var(--brand-dark);
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0; padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+        }
+
+        .sale-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .promo-box {
+            background-color: #ffffff;
+            border: 6px solid var(--sale-red);
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 20px rgba(230, 0, 0, 0.15);
+            border-radius: 20px;
+            max-width: 800px;
+        }
+
+        .promo-title { color: var(--sale-red); font-size: 3.5rem; margin: 0; }
+        .promo-subtitle { color: var(--brand-dark); font-size: 2rem; margin: 15px 0 0; }
+
+        .sale-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+            justify-items: center;
+        }
+
+        .sale-gallery img {
+            width: 100%;
+            max-width: 350px;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 6px solid var(--brand-pink);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0; left: 0; width: 100%;
+            height: var(--footer-height);
+            background-color: var(--brand-dark);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 4000;
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed-logo-container"></div>
+    <header>
+        <h1>FOR THE BEACHES</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="bikinis.html">BIKINIS</a></li>
+                <li><a href="sale.html" style="background: var(--brand-border);">SALE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="sale-container">
+        <section class="promo-box">
+            <h2 class="promo-title">TODAY ONLY!!!</h2>
+            <p class="promo-subtitle">30% OFF Your next order of $100 or more.</p>
+        </section>
+
+        <div class="sale-gallery">
+            <img src="https://images.unsplash.com/photo-1596435707700-62645849f05a?auto=format&fit=crop&w=600&q=80" alt="Sale Item 1">
+            <img src="https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?auto=format&fit=crop&w=600&q=80" alt="Sale Item 2">
+            <img src="https://images.unsplash.com/photo-1590650213165-c1fef80648c4?auto=format&fit=crop&w=600&q=80" alt="Sale Item 3">
+        </div>
+    </main>
+
+    <footer><p>For the Beaches 2026.</p></footer>
+</body>
+</html>
