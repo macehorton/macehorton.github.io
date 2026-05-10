@@ -1,4 +1,4 @@
-
+index.html
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -159,6 +159,7 @@
 </body>
 </html>
 
+bikinis.html
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -339,6 +340,7 @@
 </body>
 </html>
 
+sale.html
 <html lang="en">
 <head>
     <meta charset="UTF-8">
