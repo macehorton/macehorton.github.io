@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For The Beaches | Checkout</title>
+    <style>
+        /* Reuse the same Root and Body styles for consistency */
+        :root {
+            --brand-pink: #FFC0CB;
+            --brand-border: #D02090;
+            --brand-dark: #800040;
+            --footer-height: 60px;
+            --header-height: 180px; 
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial Black', sans-serif;
+            background-color: #ffffff;
+            padding-bottom: calc(var(--footer-height) + 40px);
+            padding-top: var(--header-height);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .fixed-logo-container {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100vh;
+            z-index: -2;
+            background-image: url('https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+        }
+
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: var(--header-height);
+            background-color: var(--brand-pink);
+            border-bottom: 8px solid var(--brand-border);
+            z-index: 3000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 8vw, 4.5rem); 
+            color: var(--brand-dark);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 15px; 
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .checkout-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 5px solid var(--brand-pink);
+            border-radius: 20px;
+            z-index: 1;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            color: var(--brand-dark);
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        input {
+            padding: 12px;
+            border: 2px solid var(--brand-pink);
+            border-radius: 8px;
+            font-family: sans-serif;
+        }
+
+        .order-btn {
+            width: 100%;
+            background-color: var(--brand-dark);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .order-btn:hover {
+            background-color: var(--brand-border);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0; left: 0; width: 100%;
+            height: var(--footer-height);
+            background-color: var(--brand-dark);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 4000;
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed-logo-container"></div>
+    <header>
+        <h1>FOR THE BEACHES</h1>
+    </header>
+
+    <main class="checkout-container">
+        <h2 style="color: var(--brand-dark); text-align: center;">CHECKOUT</h2>
+        <form>
+            <div class="form-group">
+                <label>FULL NAME</label>
+                <input type="text" placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+                <label>SHIPPING ADDRESS</label>
+                <input type="text" placeholder="123 Beach Lane">
+            </div>
+            <div class="form-group">
+                <label>CARD NUMBER</label>
+                <input type="text" placeholder="0000 0000 0000 0000">
+            </div>
+            <div class="form-group" style="flex-direction: row; gap: 10px;">
+                <div style="flex: 1; display: flex; flex-direction: column;">
+                    <label>EXPIRY</label>
+                    <input type="text" placeholder="MM/YY">
+                </div>
+                <div style="flex: 1; display: flex; flex-direction: column;">
+                    <label>CVV</label>
+                    <input type="text" placeholder="123">
+                </div>
+            </div>
+            <button type="button" class="order-btn" onclick="alert('Order Placed! Time to hit the beach!')">PLACE ORDER</button>
+        </form>
+    </main>
+
+    <footer><p>For the Beaches 2026.</p></footer>
+</body>
+</html>
