@@ -155,31 +155,71 @@
         </nav>
     </header>
 
-    <main class="cart-container">
-        <h2 style="color: var(--brand-dark); font-size: 2.5rem;">YOUR CART</h2>
-        <table class="cart-table">
-            <thead>
-                <tr>
-                    <th>Item</th>
-                    <th>Size</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Azure Coast Two-Piece</td>
-                    <td>Large</td>
-                    <td>$48.00</td>
-                </tr>
-                <tr>
-                    <td><strong>TOTAL</strong></td>
-                    <td></td>
-                    <td><strong>$48.00</strong></td>
-                </tr>
+   <main class="cart-container">
+    <h2 style="color: var(--brand-dark); font-size: 2.5rem;">YOUR CART</h2>
+    <table class="cart-table">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="cart-items">
             </tbody>
-        </table>
-        <a href="checkout.html" class="checkout-btn">PROCEED TO CHECKOUT</a>
-    </main>
+        <tfoot>
+            <tr>
+                <td><strong>TOTAL</strong></td>
+                <td id="cart-total"><strong>$0.00</strong></td>
+                <td><button onclick="clearCart()" style="background:none; border:none; color:red; cursor:pointer; font-weight:bold;">Clear All</button></td>
+            </tr>
+        </tfoot>
+    </table>
+    <a href="checkout.html" class="checkout-btn">PROCEED TO CHECKOUT</a>
+</main>
+
+<script>
+    function displayCart() {
+        const cart = JSON.parse(localStorage.getItem('beachCart')) || [];
+        const container = document.getElementById('cart-items');
+        const totalDisplay = document.getElementById('cart-total');
+        
+        container.innerHTML = '';
+        let total = 0;
+
+        if (cart.length === 0) {
+            container.innerHTML = '<tr><td colspan="3">Your cart is empty!</td></tr>';
+        } else {
+            cart.forEach((item, index) => {
+                total += item.price;
+                container.innerHTML += `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>$${item.price.toFixed(2)}</td>
+                        <td><button onclick="removeItem(${index})" style="color:red; cursor:pointer;">Remove</button></td>
+                    </tr>
+                `;
+            });
+        }
+        
+        totalDisplay.innerHTML = `<strong>$${total.toFixed(2)}</strong>`;
+    }
+
+    function removeItem(index) {
+        let cart = JSON.parse(localStorage.getItem('beachCart'));
+        cart.splice(index, 1);
+        localStorage.setItem('beachCart', JSON.stringify(cart));
+        displayCart();
+    }
+
+    function clearCart() {
+        localStorage.removeItem('beachCart');
+        displayCart();
+    }
+
+    // Run this when the page loads
+    displayCart();
+</script>
 
     <footer><p>For the Beaches 2026.</p></footer>
 </body>
