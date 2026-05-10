@@ -268,7 +268,7 @@
         
         <div class="product-grid">
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1596435707700-62645849f05a?auto=format&fit=crop&w=600&q=80" alt="Turquoise high-waisted bikini">
+                <img src="https://www.bing.com/images/search?view=detailV2&ccid=%2FcFswSFS&id=5C44CDF02F92E8CC858375D680D4BDA24560C619&thid=OIP._cFswSFSLPj82QttQzMOJAHaLH&mediaurl=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0293%2F9277%2Ffiles%2F01-24-24_S9_10_2280FN_Jade_RA_RL_11-15-01_1647_PXF.jpg%3Fv%3D1706638810%26width%3D801%26height%3D1202%26crop%3Dcenter&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.fdc16cc121522cf8fcd90b6d43330e24%3Frik%3DGcZgRaK91IDWdQ%26pid%3DImgRaw%26r%3D0&exph=1202&expw=801&q=turquoise+high+waist+bikini&form=IRPRST&ck=663D7593B35C01E4962E7040D5187BF5&selectedindex=10&itb=0&cw=1405&ch=667&ajaxhist=0&ajaxserp=0&pivotparams=insightsToken%3Dccid_cT0NX4yn*cp_BBCBD9316E95DDCCE3788D10A3712962*mid_CD0891431B9E090BBC7C1AE70AD70799953DF8CC*thid_OIP.cT0NX4yn7a3h!_NvfAJW0QQHaLJ&vt=0&sim=11&iss=VSI&ajaxhist=0&ajaxserp=0" alt="Turquoise high-waisted bikini">
                 <div class="product-name">Azure Coast Two-Piece</div>
                 <div class="product-price">$48.00</div>
                 <div class="product-sizes">SIZES: S, M, L, XL, XXL, 3XL</div>
@@ -276,7 +276,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?auto=format&fit=crop&w=600&q=80" alt="Sleek black sporty bikini">
+                <img src="https://www.bing.com/images/search?view=detailV2&ccid=3exuHXDg&id=3AD0E2EB2AB20246B6C04C38DC53094E1ED2B34B&thid=OIP.3exuHXDgGyN4QyLlBt4DlwHaLH&mediaurl=https%3A%2F%2Fimage.ezshopcarts.com%2F3f580679b590fc75cc6046914c1e1852%2F2024011502%2F7c3a6769e240d36845cc07d2bbb09ed0.jpg&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.ddec6e1d70e01b23784322e506de0397%3Frik%3DS7PSHk4JU9w4TA%26pid%3DImgRaw%26r%3D0&exph=1200&expw=800&q=black+sporty+bikini&FORM=IRPRST&ck=DEEB6AEA000D9133A9238631B5C80768&selectedIndex=11&itb=0&adtq=1&cw=1405&ch=667&ajaxhist=0&ajaxserp=0" alt="Sleek black sporty bikini">
                 <div class="product-name">Midnight Wave Bikini</div>
                 <div class="product-price">$52.00</div>
                 <div class="product-sizes">SIZES: S, M, L, XL, XXL, 3XL</div>
@@ -284,7 +284,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1590650213165-c1fef80648c4?auto=format&fit=crop&w=600&q=80" alt="Floral patterned ruffled bikini">
+                <img src="https://www.bing.com/images/search?view=detailV2&ccid=BtO8ieFW&id=03B76D2031937F5504F1951810A78CD06429BD15&thid=OIP.BtO8ieFWiMZGvuKo6AJq8AAAAA&mediaurl=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F71oc3-LWrWL.__AC_SY445_SX342_QL70_ML2_.jpg&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.06d3bc89e15688c646bee2a8e8026af0%3Frik%3DFb0pZNCMpxAYlQ%26pid%3DImgRaw%26r%3D0&exph=445&expw=333&q=floral+patterned+ruffled+bikini+plus+sized&FORM=IRPRST&ck=DC50E39FDF5C07A22E7784224EF6C362&selectedIndex=4&itb=0&cw=1405&ch=667&ajaxhist=0&ajaxserp=0" alt="Floral patterned ruffled bikini">
                 <div class="product-name">Paradise Bloom Bikini</div>
                 <div class="product-price">$55.00</div>
                 <div class="product-sizes">SIZES: S, M, L, XL, XXL, 3XL</div>
