@@ -84,6 +84,61 @@
             padding: 0 25px;
         }
 
+        /* Home Content Section */
+        .home-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image-wrapper {
+            width: 100%;
+            border: 8px solid var(--brand-pink);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* Using a high-quality placeholder representing inclusive swimwear groups */
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        .welcome-statement {
+            font-size: 1.5rem;
+            color: var(--brand-dark);
+            font-weight: 500;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .cta-shop-now {
+            display: inline-block;
+            background-color: var(--brand-border);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            transition: background 0.3s;
+        }
+
+        .cta-shop-now:hover {
+            background-color: var(--brand-dark);
+        }
+
         /* Sale Page Content */
         .sale-container {
             max-width: 1200px;
