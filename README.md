@@ -494,6 +494,6 @@ sale.html
         </div>
     </main>
 
-    <footer><p>For the Beaches 2026.</p></footer>
+    <footer><p>For the Beaches 2026. All Rights Reserved.</p></footer>
 </body>
 </html>
