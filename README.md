@@ -25,28 +25,23 @@
             color: var(--text-main);
         }
 
-        /* Typography Legibility - All forms (Bold, Italics, Caps) */
-        h1, h2, h3 { 
-            color: var(--brand-dark); 
-            text-transform: uppercase; /* Testing all caps legibility */
-            letter-spacing: 1px;
+       .fixed-logo-container {
+            position: fixed; /* Keeps it in one place while scrolling */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh; /* Covers the full height of the viewport */
+            z-index: -1;   /* Places it behind the text content */
+            
+            /* Visuals */
+            background-image: url('https://via.placeholder.com/1920x1080/FFC0CB/800040?text=FOR+THE+BEACHES');
+            background-size: cover;      /* Ensures it spans the entire width */
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.6; /* Lightened so text remains legible over it */
         }
 
-        .emphasis-text {
-            font-style: italic;
-            font-weight: bold;
-            color: var(--brand-border);
-        }
-
-        /* Header & Logo */
-        .header-banner {
-            background-color: var(--brand-pink);
-            border-bottom: 8px solid var(--brand-border);
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        /* Navigation - 46px+ Touch Target */
+        /* Navigation remains at the top */
         nav {
             background-color: var(--brand-dark);
             position: sticky;
@@ -60,7 +55,6 @@
             justify-content: center;
             margin: 0;
             padding: 0;
-            flex-wrap: wrap;
         }
 
         nav a {
@@ -73,42 +67,45 @@
             padding: 0 20px;
         }
 
-        /* Container & Content */
+        /* Content needs a background so it covers the logo as you scroll */
+        .content-wrapper {
+            margin-top: 100vh; /* Pushes content down so logo is seen first */
+            background-color: white;
+            position: relative;
+            z-index: 1;
+            padding: 50px 20px;
+            border-top: 10px solid var(--brand-border);
+        }
+
         .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .resource-list {
-            margin: 20px 0;
-            padding: 0;
-            list-style-type: none;
+        h1, h2 {
+            color: var(--brand-dark);
+            text-transform: uppercase;
         }
 
-        .resource-list li {
-            background: white;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-left: 5px solid var(--brand-border);
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .external-link {
-            color: #005A9C;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #eee;
+        .spacer {
+            height: 1000px; /* Temporary height to demonstrate the scroll effect */
         }
     </style>
 </head>
 <body>
+
+    <div class="fixed-logo-container" aria-hidden="true"></div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#resources">RESOURCES</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <main class="container" id="home">
 
     <nav>
         <ul>
